@@ -45,6 +45,50 @@
 //   return allLogins.includes(login);
 // };
 
+// /* Дополнительная функция для нового решения (посоветованного) */
+// const isTryAdd = function (allLogins, login) {
+//   if (isLoginUnique(allLogins, login)) {
+//     return false;
+//   }
+//   allLogins.push(login);
+//   return true;
+// };
+
+// /* --------------Посоветованное решение----------- */
+// const addLogin = function (allLogins, login) {
+//   for (let i = 1; i > 0; i += 1) {
+//     login = prompt('Введите логин');
+
+//     if (!isLoginValid(login)) {
+//       return alert('Ошибка! Логин должен быть от 4 до 16 символов');
+//     }
+//     if (isLoginUnique(allLogins, login)) {
+//       return alert('Такой логин уже используется!');
+//     }
+
+//     return !isTryAdd(allLogins, login)
+//       ? alert('Такой логин уже используется!')
+//       : alert(`Логин "${login}" успешно добавлен!`);
+//   }
+// };
+
+/* ------------Мое решение измененное без ЭЛСОВ и без сравнения в ИФах */
+// const addLogin = function (allLogins, login) {
+//   for (let i = 1; i > 0; i += 1) {
+//     login = prompt('Введите логин');
+
+//     if (!isLoginValid(login)) {
+//       return alert('Ошибка! Логин должен быть от 4 до 16 символов');
+//     }
+//     if (isLoginUnique(allLogins, login)) {
+//       return alert('Такой логин уже используется!');
+//     }
+//     logins.push(login);
+//     return alert(`Логин "${login}" успешно добавлен!`);
+//   }
+// };
+
+/* -----------Мое решение-------------- */
 // const addLogin = function (allLogins, login) {
 //   for (let i = 1; i > 0; i += 1) {
 //     login = prompt('Введите логин');
@@ -67,5 +111,4 @@
 // console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
 // console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
-
-// console.log(isLoginValid);
+// -----------------------------------------------------------------------------------------------------------------
