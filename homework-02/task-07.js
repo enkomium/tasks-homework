@@ -112,3 +112,18 @@
 // console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // -----------------------------------------------------------------------------------------------------------------
+
+// function findLongestWord(string) {
+//   string = string.split(' ');
+//   let long = string[0];
+
+//   for (let i = 0; i < string.length; i += 1) {
+//     if (string[i].length > long.length) {
+//       long = string[i];
+//     }
+//   }
+
+//   return long;
+// }
+
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));

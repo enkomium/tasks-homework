@@ -197,3 +197,10 @@
 // }
 
 // console.log(includes([1, 2, 3, 4, 5], 3));
+
+// function getExtremeElements(array) {
+//   const lastIndex = array.length - 1;
+//   const result = array[(0, lastIndex)];
+
+//   return result;
+// }
