@@ -20,14 +20,24 @@ const account = {
   // * Метод создает и возвращает объект транзакции.
   // * Принимает сумму и тип транзакции.
   createTransaction(amount, type) {
-    return type;
+    const newTransaction = {
+      id: 1,
+      type,
+      amount,
+    };
+
+    return newTransaction;
   },
 
   // * Метод отвечающий за добавление суммы к балансу.
   // * Принимает сумму танзакции.
   // * Вызывает createTransaction для создания объекта транзакции
   // * после чего добавляет его в историю транзакций
-  deposit(amount) {},
+  deposit(amount) {
+    this.balance += amount;
+
+    this.transactions.push(this.newTransaction);
+  },
 
   // * Метод отвечающий за снятие суммы с баланса.
   // * Принимает сумму танзакции.
@@ -39,7 +49,9 @@ const account = {
   withdraw(amount) {},
 
   // * Метод возвращает текущий баланс
-  getBalance() {},
+  getBalance() {
+    return this.balance;
+  },
 
   // * Метод ищет и возвращает объект транзации по id
   getTransactionDetails(id) {},
@@ -49,4 +61,10 @@ const account = {
   getTransactionTotal(type) {},
 };
 
-console.log(account.createTransaction(100, 200));
+console.log(account.createTransaction(100, 'deposit'));
+
+console.log(account.deposit(300));
+
+console.log(account.transactions);
+
+// console.log(account.balance);
