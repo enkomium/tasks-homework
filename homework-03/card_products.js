@@ -20,6 +20,7 @@ const cart = {
   },
   add(product) {
     const { items } = this;
+
     // Проверяем, если добавляемый обьект уже есть в корзине увеличиваем quantity
     for (const item of items) {
       if (item.name === product.name) {
@@ -60,11 +61,27 @@ const cart = {
 
     return total;
   },
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
-};
+  increaseQuantity(productName) {
+    const { items } = this;
 
-console.log(cart.getItems());
+    for (const item of items) {
+      if (item.name === productName) {
+        item.quantity += 1;
+        return;
+      }
+    }
+  },
+  decreaseQuantity(productName) {
+    const { items } = this;
+
+    for (const item of items) {
+      if (item.name === productName) {
+        item.quantity -= 1;
+        return;
+      }
+    }
+  },
+};
 
 cart.add({ name: '🍎', price: 50 });
 cart.add({ name: '🍇', price: 60 });
@@ -74,11 +91,15 @@ cart.add({ name: '🍓', price: 110 });
 cart.add({ name: '🍓', price: 110 });
 cart.add({ name: '🍓', price: 110 });
 
-console.table(cart.getItems());
-
 console.log(cart.remove('🍎'));
 
-console.log(cart.getItems());
+console.table(cart.getItems());
+
+console.log(cart.countTotalPrice());
+
+console.log(cart.increaseQuantity('🍇'));
+
+console.log(cart.decreaseQuantity('🍓'));
 
 console.table(cart.getItems());
 
