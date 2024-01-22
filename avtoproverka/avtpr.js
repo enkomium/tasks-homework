@@ -204,3 +204,217 @@
 
 //   return result;
 // }
+
+// -----------------------------------------------------------------------------------------------------------------------------
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+
+//   getPotions() {
+//     return this.potions;
+//   },
+
+//   addPotion(newPotion) {
+//     for (const item of this.potions) {
+//       if (item.name === newPotion.name) {
+//         return `Ошбка! Зелье ${newPotion.name} уже есть в вашем ивентаре!`;
+//       }
+//     }
+
+//     this.potions.push(newPotion);
+//   },
+
+//   removePotion(potionName) {
+//     const { potions } = atTheOldToad;
+
+//     for (let i = 0; i < potions.length; i += 1) {
+//       if (potions[i].name === potionName.name) {
+//         potions.splice(i, 1);
+//         return `Зелье ${potionName} было удалено из инвентаря.`;
+//       }
+//     }
+//     return `Зелье ${potionName} нет в инвентаре!`;
+//   },
+
+//   updatePotionName(oldName, newName) {
+//     const { potions } = atTheOldToad;
+
+//     for (const item of potions) {
+//       if (item.name === oldName) {
+//         item.name = newName;
+//         return `Зелье ${oldName} было обновлено до ${newName}.`;
+//       }
+//     }
+//     return `Зелье ${oldName} нет в инвентаре!`;
+//   },
+// };
+
+// console.log(atTheOldToad.potions);
+
+// console.log(atTheOldToad.removePotion({ name: 'Stone skin', price: 520 }));
+
+// console.log(atTheOldToad.potions);
+
+// console.log(atTheOldToad.updatePotionName('Dragon breath', 'VATAFAK'));
+
+// console.log(atTheOldToad.addPotion({ name: 'VACHDISH PRO', price: 777 }));
+
+// console.log(atTheOldToad.updatePotionName('VACHDISH PRO', 'VItoliSH PRO MAX'));
+// console.log(atTheOldToad.potions);
+
+// console.log(atTheOldToad.addPotion({ name: 'MAMBA', price: 555 }));
+
+// console.log(atTheOldToad.updatePotionName('Dragon breath', 'VATAFAK'));
+// console.log(atTheOldToad.potions);
+// ----------------------------------------------------------------------------------------------------------------------
+
+// const user = {
+//   name: 'Mango',
+//   age: 20,
+//   hobby: 'html',
+//   premium: true,
+// };
+
+// user.mood = 'happy';
+// user.hobby = 'skydiving';
+
+// const keys = Object.keys(user);
+
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+// -------------------------------------------------------------------------------------------------------------------------
+
+// const countProps = function (obj) {
+//   const quantity = Object.keys(obj).length;
+//   return quantity;
+// };
+
+// console.log(countProps({})); // 0
+
+// console.log(countProps({ name: 'Mango', age: 2 })); // 2
+
+// console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 })); // 3
+// --------------------------------------------------------------------------------------------------------------------------
+
+// const findBestEmployee = function (employees) {
+//   const keys = Object.keys(employees);
+//   const values = Object.values(employees);
+//   const maxNumber = Math.max(...values);
+
+//   for (const key of keys) {
+//     if (employees[key] === maxNumber) {
+//       console.log(`${key} = ${maxNumber}`);
+//     }
+//   }
+// };
+
+// console.log(
+//   findBestEmployee({
+//     ann: 29,
+//     david: 35,
+//     helen: 1,
+//     lorence: 99,
+//   }),
+// ); // lorence
+
+// console.log(
+//   findBestEmployee({
+//     poly: 12,
+//     mango: 17,
+//     ajax: 4,
+//   }),
+// ); // mango
+
+// console.log(
+//   findBestEmployee({
+//     lux: 147,
+//     david: 21,
+//     kiwi: 19,
+//     chelsy: 38,
+//   }),
+// ); // lux
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// const countTotalSalary = function (employees) {
+//   let total = 0;
+//   const keys = Object.keys(employees);
+
+//   for (const key of keys) {
+//     console.log(`Сотрудник ${key} = ${employees[key]}`);
+//     total += employees[key];
+//   }
+//   return console.log('Общая сумма зарплат сотрудников =', total);
+// };
+
+// console.log(countTotalSalary({})); // 0
+
+// console.log(
+//   countTotalSalary({
+//     mango: 100,
+//     poly: 150,
+//     alfred: 80,
+//   }),
+// ); // 330
+
+// console.log(
+//   countTotalSalary({
+//     kiwi: 200,
+//     lux: 50,
+//     chelsy: 150,
+//   }),
+// ); // 400
+//
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 2 },
+// ];
+
+// const getAllPropValues = function (arr, prop) {
+//   const array = [];
+
+//   for (const item of arr) {
+//     if (item[prop]) {
+//       array.push(item[prop]);
+//     }
+//   }
+//   return array;
+// };
+
+// console.log(getAllPropValues(products, 'name')); // ['Радар', 'Сканер', 'Дроид', 'Захват']
+
+// console.log(getAllPropValues(products, 'quantity')); // [4, 3, 7, 2]
+
+// console.log(getAllPropValues(products, 'category')); // []
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 2 },
+// ];
+
+// const calculateTotalPrice = function (allProdcuts, productName) {
+//   let total = 0;
+
+//   for (const item of allProdcuts) {
+//     if (item.name === productName) {
+//       total += item.price * item.quantity;
+//     }
+//   }
+
+//   return total;
+// };
+
+// console.log(calculateTotalPrice(products, 'Радар')); // 5200
+
+// console.log(calculateTotalPrice(products, 'Дроид')); // 2800
