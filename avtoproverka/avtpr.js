@@ -418,3 +418,81 @@
 // console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
 // console.log(calculateTotalPrice(products, 'Дроид')); // 2800
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// const pizzaPalace = {
+//   pizzas: ['Ультрасыр', 'Аль Копчино', 'Четыре нарезона'],
+//   order(pizzaName, onSuccess, onError) {
+//     if (!this.pizzas.includes(pizzaName)) {
+//       return onError(`В ассортименте нет пиццы с названием ${pizzaName}.`);
+//     }
+//     return onSuccess(pizzaName);
+//   },
+// };
+// // Пиши код выше этой строки
+
+// // Колбэк для onSuccess
+// function makePizza(pizzaName) {
+//   return console.log(`Ваш заказ принят. Готовим пиццу ${pizzaName}.`);
+// }
+
+// // Колбэк для onError
+// function onOrderError(error) {
+//   return console.log(`Ошибка! ${error}`);
+// }
+
+// // Вызовы метода с колбэками
+// pizzaPalace.order('Аль Копчино', makePizza, onOrderError);
+// pizzaPalace.order('Четыре нарезона', makePizza, onOrderError);
+// pizzaPalace.order('Биг майк', makePizza, onOrderError);
+// pizzaPalace.order('Венская', makePizza, onOrderError);
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// Геморная задача с CALL
+// const orders = [
+//   { email: 'solomon@topmail.ua', dish: 'Burger' },
+//   { email: 'artemis@coldmail.net', dish: 'Pizza' },
+//   { email: 'jacob@mail.com', dish: 'Taco' },
+// ];
+
+// // Пиши код ниже этой строки
+// function composeMessage(position) {
+//   return `Готовим ${this.dish} для ${this.email}. Ваш заказ ${
+//     position + 1
+//   }-й в очереди.`;
+// }
+
+// const messages = [];
+
+// // Запомни, когда вызываешь функцию, то по сути ты запускаешь ее выполнение!
+// // ТО есть все что мы записали при ее вызове, передалось в саму функцию, отработало, вернулось и записалось в order!!!!
+// for (let i = 0; i < orders.length; i += 1) {
+//   const order = composeMessage.call(orders[i], i);
+//   messages.push(order);
+// }
+// ---------------------------------------------------------------------------------------------------------------------------
+
+// const students = [
+//   { name: 'Манго', courses: ['математика', 'физика'] },
+//   { name: 'Поли', courses: ['информатика', 'математика'] },
+//   { name: 'Киви', courses: ['физика', 'биология'] },
+// ];
+
+// const allCourses = students.flatMap(student => student.courses);
+
+// console.log(allCourses);
+
+// const uniqueCourses = allCourses.filter(
+//   (course, index, array) => array.indexOf(course) === index,
+// );
+
+// for (let i = 0; i < allCourses.length; i += 1) {
+//   if (allCourses.indexOf(allCourses[i]) === i) {
+//     console.log(allCourses[i], i);
+//   }
+// }
+
+// console.log(uniqueCourses);
+// asdaseeeeeeeeeeee
+
+const result = xxx;

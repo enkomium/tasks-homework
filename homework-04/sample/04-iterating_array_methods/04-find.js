@@ -1,7 +1,8 @@
 //  * Array.prototype.find()
 // - Поэлементо перебирает оригинальный массив
-// - Возвращает первый элемент удовлетворяющий условию или undefined
+// - Возвращает ПЕРВЫЙ элемент удовлетворяющий условию и прирывает поиск или возвращает undefined, - при приведении к Будю = false
 // Восновном проверяют на равенство и для поиска по УНИКАЛЬНМ свойствам, типа найти не по имени а по id
+// Поиск подколлекции в коллекции это filter поиск 1 элемена в коллекции это find
 
 // Ищем человека по id
 // const players = [
@@ -19,3 +20,7 @@
 //   allPlayer.find(({ id }) => id === playerId);
 
 // console.log(finPlayerById(players, playerIdToFind));
+// ----------------------------------------------------------------
+
+// const finPlayerById = players.find(player => player.id === playerIdToFind);
+// console.log(finPlayerById);
