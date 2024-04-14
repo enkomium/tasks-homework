@@ -522,3 +522,88 @@
 //   // Removing Gas mask from inventory
   
 //   console.log(inventory.items); 
+// ------------------------------------------------------------------------------------------------------------------------------
+
+// class Car {
+//   brand; /* для читабельности кода разрабам, писать не обязательно если они уже есть в Конструторе! */
+//   model;
+//   color;
+//   #price;
+//   configuration;
+
+//   static #MAX_PRICE = 100000; 
+
+//   static getMaxPrice() {
+//     return this.#MAX_PRICE;
+//   }
+
+//   constructor({ brand, model, color, price, configuration }) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.color = color;
+//     this.#price = price;
+//     this.configuration = configuration;
+//   }
+
+//   getInfo() {
+//     return `Brand: ${this.brand}, Model: ${this.model}, Price: $${this.price}, configuration: ${this.configuration}`;
+//   }
+
+//   get price() {
+//     return this.#price;
+//   }
+
+//   set price(newPrice) {
+//     this.#price = newPrice;
+//   }
+// }
+
+// class Audi extends Car {
+//   constructor({ brand, model, color, price, configuration }) {
+//     super({ brand, model, color, price, configuration });
+//   }
+// }
+
+// const Q3 = new Audi({ brand: "audi", model: "Q3", color: "blue", price: 30000, configuration: "econom"})
+
+// console.log(Q3.getInfo());
+// Q3.price = 35000;
+// console.log(Q3.getInfo());
+
+// class BMW extends Car {}
+
+// class Vesta extends Car {}
+
+// class Vehicle {
+//   // Конструктор класса, принимает один параметр - brand
+//   constructor(brand) {
+//     // Устанавливаем свойство brand
+//     this.brand = brand;
+//   }
+
+//   // Метод класса, который выводит информацию о том, что транспортное средство движется
+//   drive() {
+//     console.log(`${this.brand} is driving.`);
+//   }
+// }
+
+// class Car extends Vehicle {
+//   // Конструктор класса Car, принимает два параметра - brand и model
+//   constructor(brand, model) {
+//     // Вызываем конструктор родительского класса Vehicle с помощью super()
+//     super(brand);
+//     // Устанавливаем свойство model
+//     this.model = model;
+//   }
+
+//   // Метод класса, который выводит информацию о модели автомобиля
+//   getModel() {
+//     console.log(`Model: ${this.model}`);
+//   }
+// }
+
+// const myCar = new Car('Toyota', 'Camry');
+
+// myCar.drive(); // Вывод: Toyota is driving.
+// myCar.getModel(); // Вывод: Model: Camry
+// ------------------------------------------------------------------------------------------------------------------------------

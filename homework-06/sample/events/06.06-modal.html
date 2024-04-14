@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Мастерская: модальное окно</title>
+    <link rel="stylesheet" href="/tasks-homework/css/styles.css" />
+    <link rel="stylesheet" href="/tasks-homework/css/modal.css" />
+  </head>
+  <body>
+    <p><a href="/">На главную</a></p>
+
+    <button class="button" data-action="open-modal">Открыть модалку</button>
+
+    <div class="backdrop js-backdrop">
+      <div class="modal">
+        <h2>Modal window</h2>
+        <p>
+            В дизайне пользовательского интерфейса для компьютерных приложений <br> модальное окно - это графический элемент управления, 
+            подчиненный главному окну приложения. Он создает режим, который отключает главное окно, но сохраняет его видимым, 
+            а модальное окно является дочерним окном перед ним. 
+            Пользователи должны взаимодействовать с модальным окном, прежде чем они смогут вернуться к родительскому приложению. 
+            Это позволяет избежать прерывания рабочего процесса в главном окне. 
+            Модальные окна иногда называют большими окнами или модальными диалогами, поскольку они часто отображают диалоговое окно.
+        </p>
+        <button type="button" class="button" data-action="close-modal">
+          Закрыть
+        </button>
+      </div>
+    </div>
+
+    <script src="/tasks-homework/homework-06/sample/events/06-modal.js" type="module"></script>
+  </body>
+</html>
