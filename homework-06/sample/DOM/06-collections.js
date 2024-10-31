@@ -21,7 +21,7 @@ const colorPickerOptions = [
   //   buttonEl.textContent = option.label;
   //   buttonEl.style.backgroundColor = option.color;
   
-  //   return buttonEl; /* Возвращаем массив копок такой же длинны которые создали */
+  //   return buttonEl; /* Возвращаем массив кнопок такой же длинны которые создали */
   // });
   
   // console.log(elements);

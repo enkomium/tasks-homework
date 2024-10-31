@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика по DOM</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./practice.css">
+    <link rel="stylesheet" href="./animation.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a class="logo" href="">NiGa</a>
+                <div class="menu-nav">
+                    <ul class="site-nav">
+                        <li class="site-nav__indent">
+                            <a class="site-nav__link" href="">Новости</a>
+                        </li>
+                        <li class="site-nav__indent">
+                            <a class="site-nav__link" href="">Стволы</a>
+                        </li>
+                        <li class="site-nav__indent">
+                            <a class="site-nav__link" href="">Вачдыс</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    </header>
+
+            <main>
+                <section class="section-hero">
+                    <div class="hero">
+                        <h1 class="hero__title">
+                            Выбил скин за 20р!!!
+                        </h1>
+                        <button
+                        class="hero__button hero__button--pulsate-style"
+                        type="button"
+                        data-modal-open>
+                        Уууууууу
+                        </button>
+                    </div>
+
+                    <div class="backdrop backdrop--is-hidden" data-modal> 
+                        <div class="modal">
+                            <form name="js-speaker-form" class="form" autocomplete="off">
+                                <h2 class="form__title">
+                                    Оставьте свои данные <br> мы вас найдем и отпиздим
+                                </h2>
+                                <label class="form__field">Имя
+                                    <input
+                                    class="form__input"
+                                    type="text"
+                                    name="name"
+                                    autofocus
+                                    placeholder=" "
+                                    />
+                                </label>
+                                <label class="form__field">Фамилия
+                                    <input
+                                    class="form__input"
+                                    type="text"
+                                    name="name"
+                                    autofocus
+                                    placeholder=" "
+                                    />
+                                </label>
+                                <label class="form__field">Размер сапог
+                                    <input
+                                    class="form__input"
+                                    type="text"
+                                    name="name"
+                                    autofocus
+                                    placeholder=" "
+                                    />
+                                </label>
+                                <label class="form__field">Адрес проживания
+                                    <input
+                                    class="form__input"
+                                    type="text"
+                                    name="name"
+                                    autofocus
+                                    placeholder=" "
+                                    />
+                                </label>
+                                <label class="form__field">Номер мобилы
+                                    <input
+                                    class="form__input"
+                                    type="text"
+                                    name="name"
+                                    autofocus
+                                    placeholder=" "
+                                    />
+                                </label>
+                                
+                                <button class="form__button-close" type="button" data-modal-close>Закрыть</button>
+                                <button class="form__button" type="submit" data-model-send>Отправить</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="feature-section">
+                    <h2 class="feature-section__text">NiGa мем</h2>
+                    <div class="container">
+                        <ul class="feature-list">
+                            <li class="feature-list__card">
+                                <div class="feature-list__thumb">
+                                    <img class="feature-img" src="https://kartinkof.club/uploads/posts/2022-04/1649588110_2-kartinkof-club-p-ugarnie-kartinki-pro-chernikh-2.jpg" 
+                                    alt="картинка-1"
+                                    width="300"
+                                    height="200"
+                                    />
+                                </div>
+                            </li>
+                            <li class="feature-list__card">
+                                <div class="feature-list__thumb">
+                                    <img class="feature-img" src="https://sun9-15.userapi.com/impg/F_3lZtegAoR48pBe1rp4tVl9Ad6bvMnhzsdgAg/LL159p9WfD0.jpg?size=828x607&quality=95&sign=32f0f1e4d925e4909f002d96806ff9e5&c_uniq_tag=1gWrNmCuv6T12YIbewryX6hsPiGuRQF9b1YvHvwwKFE&type=album" 
+                                    alt="картинка-2"
+                                    width="300"
+                                    height="200"
+                                    />
+                                </div>
+                            </li>
+                            <li class="feature-list__card">
+                                <div class="feature-list__thumb">
+                                    <img class="feature-img" src="https://www.funnyart.club/uploads/posts/2022-12/1672103226_www-funnyart-club-p-negr-prikol-smeshno-19.jpg" 
+                                    alt="картинка-2"
+                                    width="300"
+                                    height="200"
+                                    />
+                                </div>
+                            </li>
+                            <li class="feature-list__card">
+                                <div class="feature-list__thumb">
+                                    <img class="feature-img" src="https://www.meme-arsenal.com/memes/2303a11443c9dcfdc93ae5df232891a4.jpg" 
+                                    alt="картинка-2"
+                                    width="300"
+                                    height="200"
+                                    />
+                                </div>
+                            </li>
+                            <li class="feature-list__card">
+                                <div class="feature-list__thumb">
+                                    <img class="feature-img" src="https://100fotok.ru/wp-content/uploads/2018/11/Prikoly_pro_negrov_4.jpg" 
+                                    alt="картинка-2"
+                                    width="300"
+                                    height="200"
+                                    />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+    <script src="./practice.js" type="module"></script>
+</body>
+</html>
