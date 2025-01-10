@@ -638,3 +638,33 @@
 // alert(message);
 
 // ------------------------------------------------------------------------------------------------------------------------------
+
+
+let input;
+let total = 0;
+
+while(true){
+    input = prompt('Введите число!');
+
+    if(input === null){
+        alert(`Общая сумма чисел равна ${total}`);
+        break;
+    }else if(input.trim() === ''){
+        alert('Продолжайте вводить числа пока не нажмете "отмена"!');
+        continue; //не обязательно
+    }else if(input.startsWith('0') && input.length > 1){
+        alert('Введите число без ведущих нулей!');
+    }else {
+
+        input = Number(input);
+
+        if(isNaN(input)){
+            alert('Введите корректное число!');
+        }else if(input <= 0){
+            alert('Введите чило больше нуля!');
+        }else {
+            total += input;
+        }
+    }
+}
+
