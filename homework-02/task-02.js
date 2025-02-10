@@ -11,6 +11,8 @@
 //   return result;
 // };
 
+// Можно бе переменной result сразу в return.
+
 // console.log(
 //   calculateEngravingPrice(
 //     'Proin sociis natoque et magnis parturient montes mus',

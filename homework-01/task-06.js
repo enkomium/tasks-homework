@@ -51,7 +51,7 @@
 //     if(input === null){
 //         alert(`Общая сумма чисел равна ${total}`);
 //         break;
-//     }else if (input.trim() === "") {
+//     }else if (input.trim() === "") { // можно сделать !nput.trim() - типа trim возвращает пустую строку а пустая строка это false
 //         alert("Вы ничего не ввели!");
 //     }else if(isNaN(Number(input))) {
 //         alert('Было введено не число, попробуйте еще раз');
@@ -134,7 +134,7 @@
 //     if(input === null){
 //         alert(`Общая сумма чисел равна ${total}`);
 //         break;
-//     }else if(input.trim() === ''){
+//     }else if(input.trim() === ''){ // можно сделать !nput.trim() - типа trim возвращает пустую строку а пустая строка это false
 //         alert('Продолжайте вводить числа пока не нажмете "отмена"!');
 //         continue; //не обязательно
 //     }else if(input.startsWith('0') && input.length > 1){

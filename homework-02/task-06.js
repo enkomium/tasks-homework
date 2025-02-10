@@ -15,6 +15,43 @@
 // при этом результат prompt записывать в массив чисел не нужно,
 // после чего снова пользователю предлагается ввести число в prompt.
 
+// СУПЕР ЧЕТКОЕ РЕШЕНИЕ!!!
+// -----------------------
+// let input;
+// const numbers = [];
+// let total = 0;
+
+// while(true){
+//     input = prompt(`Введите число! \nВведенные числа: ${numbers.join(', ')}`);
+
+//     if (input === null) {
+//         if (numbers.length > 0) {
+//             for (const number of numbers) {
+//                 total += number;
+//             }
+//             alert(`Сумма всех введенных чисел равна: ${total}`);
+//         } else {
+//             alert('Вы не ввели ни одного числа.');
+//         }
+//         break;
+//     }
+    
+//     if(input.trim() === ''){
+//         alert('Вы ничего не ввели!')
+//     }else{
+//         input = Number(input);
+
+        // if(Number.isNaN(input) || input <= 0){ // Проверка на NaN и на отрицательные числа, ИЛИ запинается на правде!
+//             alert('Введите корректное число больше нуля!');
+//         }else {
+//             numbers.push(input);
+//         }
+//     }
+// }   
+
+
+// СТАРОЕ РЕШЕНИЕ (ГОВНОКОД)
+// -------------------------
 // let input;
 // const numbers = [];
 // let total = 0;

@@ -8,6 +8,16 @@
 //   return `${message} - ${message.includes('spam') || message.includes('sale')}`;
 // };
 
+// НО ЛУЧШЕ И ПРОЩЕ СДЕЛАТЬ КАК НИЖЕ👇
+// В ПЕРВОМ ПРИМЕРЕ ИЗОЩРЕННЫЙ МЕТОД а у нас простое условие!
+
+// const checkForSpam = function(message) {
+//     message = message.toLowerCase();
+
+//     return message.includes("spam") || message.includes("sale");
+
+//   };
+
 // console.log(checkForSpam('Latest technology news')); // false
 
 // console.log(checkForSpam('JavaScript weekly newsletter')); // false

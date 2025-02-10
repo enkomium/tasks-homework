@@ -37,93 +37,30 @@
 
 // const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
 
-// const isLoginValid = function (login) {
-//   return login.length >= 4 && login.length <= 16 ? true : false;
+// const isLoginValid = function(login) {
+//   return login.length >= 4 && login.length <= 16;
 // };
 
-// const isLoginUnique = function (allLogins, login) {
-//   return allLogins.includes(login);
-// };
+// const isLoginUnique = function(allLogins, login) {
+//   return !allLogins.includes(login);
+// }
 
-// /* Дополнительная функция для нового решения (посоветованного) */
-// const isTryAdd = function (allLogins, login) {
-//   if (isLoginUnique(allLogins, login)) {
-//     return false;
+// const addLogin = function(allLogins, login) {
+//   if(!isLoginValid(login)){
+//     return 'Ошибка! Логин должен быть от 4 до 16 символов'
 //   }
+  
+//   if(!isLoginUnique(allLogins, login)){
+//     return 'Такой логин уже используется!';
+//   }
+   
 //   allLogins.push(login);
-//   return true;
+//   return 'Логин успешно добавлен!'
+
 // };
 
-// /* --------------Посоветованное решение----------- */
-// const addLogin = function (allLogins, login) {
-//   for (let i = 1; i > 0; i += 1) {
-//     login = prompt('Введите логин');
-
-//     if (!isLoginValid(login)) {
-//       return alert('Ошибка! Логин должен быть от 4 до 16 символов');
-//     }
-//     if (isLoginUnique(allLogins, login)) {
-//       return alert('Такой логин уже используется!');
-//     }
-
-//     return !isTryAdd(allLogins, login)
-//       ? alert('Такой логин уже используется!')
-//       : alert(`Логин "${login}" успешно добавлен!`);
-//   }
-// };
-
-/* ------------Мое решение измененное без ЭЛСОВ и без сравнения в ИФах */
-// const addLogin = function (allLogins, login) {
-//   for (let i = 1; i > 0; i += 1) {
-//     login = prompt('Введите логин');
-
-//     if (!isLoginValid(login)) {
-//       return alert('Ошибка! Логин должен быть от 4 до 16 символов');
-//     }
-//     if (isLoginUnique(allLogins, login)) {
-//       return alert('Такой логин уже используется!');
-//     }
-//     logins.push(login);
-//     return alert(`Логин "${login}" успешно добавлен!`);
-//   }
-// };
-
-/* -----------Мое решение-------------- */
-// const addLogin = function (allLogins, login) {
-//   for (let i = 1; i > 0; i += 1) {
-//     login = prompt('Введите логин');
-
-//     if (isLoginValid(login) !== true) {
-//       return alert('Ошибка! Логин должен быть от 4 до 16 символов');
-//     } else if (isLoginUnique(allLogins, login) === true) {
-//       return alert('Такой логин уже используется!');
-//     } else logins.push(login);
-//     return alert(`Логин "${login}" успешно добавлен!`);
-//   }
-// };
-
-// addLogin(logins, 'dani');
-
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
 // console.log(addLogin(logins, 'Ajax')); // 'Логин успешно добавлен!'
 // console.log(addLogin(logins, 'robotGoogles')); // 'Такой логин уже используется!'
 // console.log(addLogin(logins, 'Zod')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Ошибка! Логин должен быть от 4 до 16 символов'
 // -----------------------------------------------------------------------------------------------------------------
-
-// function findLongestWord(string) {
-//   string = string.split(' ');
-//   let long = string[0];
-
-//   for (let i = 0; i < string.length; i += 1) {
-//     if (string[i].length > long.length) {
-//       long = string[i];
-//     }
-//   }
-
-//   return long;
-// }
-
-// console.log(findLongestWord('The quick brown fox jumped over the lazy dog'));
