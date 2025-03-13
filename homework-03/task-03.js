@@ -15,6 +15,20 @@
 //   }
 // };
 
+// Еще решение!!!
+// const findBestEmployee = function(employees) {
+//     let bestEmployees = '';
+//     let maxTasks = 0;
+
+//     for (const [name, task] of Object.entries(employees)) {
+//         if(task > maxTasks) {
+//             maxTasks = task;
+//             bestEmployees = name;
+//         }
+//     }
+//     return `У ${bestEmployees} лучший результат - ${maxTasks} задач.`
+//   };
+
 // console.log(
 //   findBestEmployee({
 //     ann: 29,

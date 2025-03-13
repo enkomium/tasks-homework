@@ -3,8 +3,8 @@
 // Каждое поле объекта, передаваемого в функцию, имеет вид "имя": "зарплата".
 
 // const countTotalSalary = function (employees) {
-//   let totalSalary = 0;
 //   const values = Object.values(employees);
+//   let totalSalary = 0;
 
 //   for (const salary of values) {
 //     totalSalary += salary;
